@@ -16,14 +16,13 @@
 
 <script setup>
 const title = useAppConfig().title
-const pages = [
-	{
-		slug: "about",
-		name: "About"
-	},
-	{
-		slug: "home",
-		name: "home"
-	}
-]
+const pagesQuery = `query {
+    pages {
+      name
+      slug
+    }
+  }`
+const { $apiCall } = useNuxtApp()
+const pages = await $apiCall(pagesQuery)
+console.log(pages)
 </script>
