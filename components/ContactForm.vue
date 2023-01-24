@@ -10,6 +10,7 @@
 					:placeholder="field.name"
 				/>
 			</div>
+			<input type="submit" value="submit" />
 		</form>
 	</div>
 </template>
