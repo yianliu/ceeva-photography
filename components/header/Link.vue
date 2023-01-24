@@ -1,21 +1,18 @@
 <template>
 	<div class="dropdown relative inline-block">
-		<NuxtLink
-			:to="page.slug"
-			class="mx-6 text-md text-slate-700 hover:text-slate-900"
-		>
+		<NuxtLink :to="page.slug" class="mx-6 text-md text-medium hover:text-dark">
 			{{ page.name }}
 		</NuxtLink>
 		<ul
-			v-if="hasChildPages"
-			class="hidden min-w-full absolute z-10 bg-slate-200 rounded-md"
+			v-if="hasChildren"
+			class="hidden min-w-full absolute z-10 bg-pale rounded-md"
 		>
 			<NuxtLink
-				v-for="childPage in page.childpages"
-				:to="childPage.slug"
-				class="block text-md p-2 text-slate-700 hover:text-slate-900 hover:bg-slate-400 rounded-md"
+				v-for="child in page.children"
+				:to="child.slug"
+				class="block text-md p-2 text-medium hover:text-dark hover:bg-light rounded-md"
 			>
-				{{ childPage.name }}
+				{{ child.name }}
 			</NuxtLink>
 		</ul>
 	</div>
@@ -28,7 +25,7 @@ const props = defineProps({
 	}
 })
 
-const hasChildPages = props.page.childpages.length
+const hasChildren = props.page.children?.length
 </script>
 <style scoped>
 .dropdown:hover ul {

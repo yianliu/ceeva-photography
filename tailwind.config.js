@@ -9,6 +9,12 @@ module.exports = {
 		"./app.vue"
 	],
 	theme: {
+		colors: {
+			dark: "#696969",
+			medium: "#808080",
+			light: "#A9A9A9",
+			pale: "#F5F5F5"
+		},
 		extend: {}
 	},
 	plugins: []
