@@ -1,13 +1,9 @@
 <template>
-	<div class="container">
-		<div class="item">
-			<nuxt-img
-				v-for="num in Array(number).keys()"
-				:src="`/${props.name}/${num + 1}.jpg`"
-				class="w-1/2"
-			/>
-		</div>
-	</div>
+	<MasonryWall :items="items" :ssr-columns="2">
+		<template #default="{ item, index }">
+			<nuxt-img :src="`/${props.name}/${item + 1}.jpg`" />
+		</template>
+	</MasonryWall>
 </template>
 
 <script setup>
@@ -20,6 +16,9 @@ const props = defineProps({
 	}
 })
 
-Vue.use
+const items = []
+for (let num = 1; num < props.number; num++) {
+	items.push(num)
+}
 // const numPerCol = number / 2
 </script>
