@@ -1,9 +1,25 @@
 <template>
-	<div class="flex flex-col">
-		<img
-			src="https://static.wixstatic.com/media/e7b81e_9c049b78eeee4277b13b9684503d72e2~mv2.jpg/v1/fill/w_998,h_1978,al_b,q_90,usm_0.66_1.00_0.01,enc_auto/e7b81e_9c049b78eeee4277b13b9684503d72e2~mv2.jpg"
-		/>
+	<div class="container">
+		<div class="item">
+			<nuxt-img
+				v-for="num in Array(number).keys()"
+				:src="`/${props.name}/${num + 1}.jpg`"
+				class="w-1/2"
+			/>
+		</div>
 	</div>
 </template>
 
-<script setup></script>
+<script setup>
+const props = defineProps({
+	name: {
+		type: String
+	},
+	number: {
+		type: Number
+	}
+})
+
+Vue.use
+// const numPerCol = number / 2
+</script>
