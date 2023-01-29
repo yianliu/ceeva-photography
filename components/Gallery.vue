@@ -1,7 +1,7 @@
 <template>
 	<MasonryWall :items="items" :ssr-columns="2">
 		<template #default="{ item, index }">
-			<nuxt-img :src="`/${props.name}/${item + 1}.jpg`" />
+			<nuxt-img :src="`/img/${props.name}/${item + 1}.jpg`" />
 		</template>
 	</MasonryWall>
 </template>

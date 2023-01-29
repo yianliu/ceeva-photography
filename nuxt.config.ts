@@ -10,8 +10,5 @@ export default defineNuxtConfig({
 			autoprefixer: {}
 		}
 	},
-	modules: ["@nuxt/image-edge"],
-	image: {
-		dir: "public/img"
-	}
+	modules: ["@nuxt/image-edge"]
 })
