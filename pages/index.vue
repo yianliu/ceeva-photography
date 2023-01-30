@@ -1,5 +1,5 @@
 <template>
 	<div>
-		<Gallery name="commercial" :number="11" />
+		<Gallery name="commercial" :number="15" />
 	</div>
 </template>
