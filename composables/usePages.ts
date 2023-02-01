@@ -19,6 +19,11 @@ export default () => {
 					name: "Portrait",
 					slug: "portrait",
 					showInNav: true
+				},
+				{
+					name: "Commercial",
+					slug: "commercial",
+					showInNav: true
 				}
 			]
 		},

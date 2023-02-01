@@ -1,5 +1,5 @@
 <template>
 	<div>
-		<Gallery name="commercial" :number="15" />
+		<NuxtLink to="commercial">View Commercial</NuxtLink>
 	</div>
 </template>
