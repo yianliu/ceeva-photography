@@ -9,5 +9,8 @@ export default defineNuxtConfig({
 			tailwindcss: {},
 			autoprefixer: {}
 		}
+	},
+	routeRules: {
+		"/**": { static: true }
 	}
 })
