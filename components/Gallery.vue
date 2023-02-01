@@ -1,6 +1,10 @@
 <template>
 	<div class="columns-1 md:columns-2 lg:columns-3 gap-0">
-		<img v-for="item in items" :src="`/img/${props.name}/${item + 1}.jpg`" />
+		<img
+			v-for="item in items"
+			:src="`/img/${props.name}/${item + 1}.jpg`"
+			loading="lazy"
+		/>
 	</div>
 </template>
 
