@@ -10,12 +10,8 @@
 
 <script setup>
 const props = defineProps({
-	name: {
-		type: String
-	},
-	number: {
-		type: Number
-	}
+	name: String,
+	number: Number
 })
 
 const items = []
