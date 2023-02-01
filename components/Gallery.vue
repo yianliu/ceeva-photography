@@ -1,9 +1,7 @@
 <template>
-	<MasonryWall :items="items" :ssr-columns="2">
-		<template #default="{ item, index }">
-			<img :src="`/img/${props.name}/${item + 1}.jpg`" />
-		</template>
-	</MasonryWall>
+	<div class="columns-1 md:columns-2 lg:columns-3 gap-0">
+		<img v-for="item in items" :src="`/img/${props.name}/${item + 1}.jpg`" />
+	</div>
 </template>
 
 <script setup>
