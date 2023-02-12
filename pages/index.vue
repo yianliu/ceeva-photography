@@ -8,3 +8,11 @@
 		/>
 	</div>
 </template>
+
+<script setup>
+const data = await useAsyncStoryblok("cdn/stories/config", {
+	version: process.env.STORYBLOK_VERSION
+})
+
+const headerMenu = ref(null)
+</script>
