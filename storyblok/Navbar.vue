@@ -1,9 +1,9 @@
 <template>
 	<div
 		v-editable="blok"
-		class="py-32 text-6xl text-[#50b0ae] font-bold text-center"
+		class="py-32 text-[#50b0ae] font-bold text-center"
 	>
-		"HELLO"
+		{{blok.menu}}
 	</div>
 </template>
 

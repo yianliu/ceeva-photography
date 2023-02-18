@@ -10,6 +10,7 @@
 			<NuxtLink
 				v-for="child in page.children"
 				:to="child.slug"
+				:target="undefined"
 				class="block text-md p-2 text-medium hover:text-dark hover:bg-light rounded-md"
 			>
 				{{ child.name }}

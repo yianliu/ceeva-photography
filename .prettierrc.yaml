@@ -4,3 +4,4 @@ tabWidth: 2
 semi: false
 singleQuote: false
 bracketSameLine: true
+bracketSpacing: true

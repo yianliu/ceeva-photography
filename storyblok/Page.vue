@@ -6,7 +6,7 @@
 			:blok="blok"
 		/>
 	</div>
-	{{ blok.body }}
+	{{ blok }}
 </template>
 
 <script setup>
