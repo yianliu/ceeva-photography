@@ -5,3 +5,5 @@ semi: false
 singleQuote: false
 bracketSameLine: true
 bracketSpacing: true
+vueIndentScriptAndStyle: true
+singleAttributePerLine: true
