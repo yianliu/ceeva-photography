@@ -4,5 +4,6 @@ export default async (story: string, config = {}) => {
 		version: runtimeConfig.environment == "live" ? "published" : "draft",
 		...config
 	})
+	console.log(runtimeConfig)
 	return res
 }
