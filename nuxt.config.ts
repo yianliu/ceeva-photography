@@ -12,5 +12,6 @@ export default defineNuxtConfig({
 	},
 	routeRules: {
 		"/**": { static: true }
-	}
+	},
+	modules: [["@storyblok/nuxt", { accessToken: process.env.STORYBLOK_TOKEN }]]
 })
