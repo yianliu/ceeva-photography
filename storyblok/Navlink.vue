@@ -1,17 +1,30 @@
 <template>
-	<div>
-		<NuxtLink
-			:to="isStory ? blok.link.cached_url : blok.link.url"
-			:target="blok.link.target"
-			class="block text-md p-2 text-medium hover:text-dark hover:bg-light rounded-md">
-			{{ blok.name }}
-		</NuxtLink>
-		{{ blok }}
+	<div
+		class="dropdown relative inline-block"
+		v-editable="blok">
+		<StoryLink
+			:blok="blok"
+			class="mx-6 text-md text-medium hover:text-dark" />
+		<ul
+			v-if="blok.children.length"
+			class="hidden min-w-full absolute z-10 bg-pale rounded-md">
+			<li>
+				<StoryLink
+					v-for="child in blok.children"
+					:key="child._uid"
+					:blok="child"
+					class="block text-md p-2 text-medium hover:text-dark hover:bg-light rounded-md" />
+			</li>
+		</ul>
 	</div>
 </template>
 
 <script setup>
 	const { blok } = defineProps({ blok: Object })
-	const isStory = blok.link.linktype == "story"
-	console.log(isStory ? blok.cached_url : blok.url)
 </script>
+
+<style scoped>
+	.dropdown:hover ul {
+		display: block;
+	}
+</style>
