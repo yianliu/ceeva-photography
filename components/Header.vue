@@ -2,7 +2,7 @@
 	const story = await useStory("header", {
 		resolve_links: "url"
 	})
-	const runtimeConfig = useRuntimeConfig()
+	const env = process.env.ENVIRONMENT
 </script>
 
 <template>
@@ -10,6 +10,6 @@
 		<StoryblokComponent
 			v-if="story"
 			:blok="story.content" />
-		{{ runtimeConfig }}
+		{{ env }}
 	</div>
 </template>
