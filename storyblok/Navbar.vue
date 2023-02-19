@@ -4,7 +4,7 @@
 		class="relative bg-white flex p-4 items-center place-content-between shadow">
 		<span
 			class="text-2xl mx-6 text-dark"
-			v-text="blok.heading"></span>
+			v-text="blok.title"></span>
 		<nav>
 			<StoryblokComponent
 				v-for="blok in blok.menu"
