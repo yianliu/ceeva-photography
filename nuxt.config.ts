@@ -1,4 +1,3 @@
-// https://v3.nuxtjs.org/api/configuration/nuxt.config
 export default defineNuxtConfig({
 	typescript: {
 		strict: true
@@ -13,5 +12,8 @@ export default defineNuxtConfig({
 	routeRules: {
 		"/**": { static: true }
 	},
-	modules: [["@storyblok/nuxt", { accessToken: process.env.STORYBLOK_TOKEN }]]
+	modules: [["@storyblok/nuxt", { accessToken: process.env.STORYBLOK_TOKEN }]],
+	runtimeConfig: {
+		ENVIRONMENT: process.env.ENVIRONMENT
+	}
 })
