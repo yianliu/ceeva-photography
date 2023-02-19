@@ -1,6 +1,7 @@
 export default async (story: string, config = {}) => {
+	const runtimeConfig = useRuntimeConfig()
 	const res = await useAsyncStoryblok(story, {
-		version: process.env.ENVIRONMENT == "live" ? "published" : "draft",
+		version: runtimeConfig.environment == "live" ? "published" : "draft",
 		...config
 	})
 	return res

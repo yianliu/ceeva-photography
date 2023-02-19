@@ -14,6 +14,6 @@ export default defineNuxtConfig({
 	},
 	modules: [["@storyblok/nuxt", { accessToken: process.env.STORYBLOK_TOKEN }]],
 	runtimeConfig: {
-		ENVIRONMENT: process.env.ENVIRONMENT
+		environment: process.env.ENVIRONMENT
 	}
 })
