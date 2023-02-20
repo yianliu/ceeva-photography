@@ -13,6 +13,7 @@
 	</div>
 </template>
 
-<script setup>
-	const props = defineProps({ blok: Object })
+<script setup lang="ts">
+	import { GalleryStoryblok } from "./component-types-sb"
+	defineProps<{ blok: GalleryStoryblok }>()
 </script>
