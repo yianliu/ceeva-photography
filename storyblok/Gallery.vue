@@ -15,7 +15,7 @@
 					class="block" />
 				<div
 					v-text="'Hello'"
-					class="text absolute inset-0 h-full w-full opacity-0 transition-colors group-hover:opacity-1"></div>
+					class="absolute inset-0 h-full w-full opacity-0 transition-colors group-hover:opacity-1"></div>
 			</div>
 		</div>
 	</div>
