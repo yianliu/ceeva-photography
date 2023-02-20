@@ -1,4 +1,4 @@
-<!-- <script setup>
+<script setup>
 	// const { slug } = useRoute().params
 
 	// const environment = useRuntimeConfig().environment
@@ -6,11 +6,12 @@
 	// 	slug && slug.length > 0 ? slug.join("/") : "home",
 	// 	environment
 	// )
-</script> -->
+	const env = useAppConfig().environment
+</script>
 
 <template>
 	<!-- <StoryblokComponent
 		v-if="story"
 		:blok="story.content" /> -->
-	Home
+	{{ env }}
 </template>
