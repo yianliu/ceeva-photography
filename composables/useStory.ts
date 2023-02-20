@@ -1,6 +1,8 @@
-export default async (story: string, environment: string, config = {}) => {
+const env = useAppConfig().environment
+
+export default async (story: string, config = {}) => {
 	const res = await useAsyncStoryblok(story, {
-		version: "published",
+		version: env == "live" ? "published" : "draft",
 		...config
 	})
 

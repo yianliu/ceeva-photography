@@ -1,7 +1,5 @@
 <script setup>
-	const environment = useRuntimeConfig().environment
-
-	const story = await useStory("header", environment, {
+	const story = await useStory("header", {
 		resolve_links: "url"
 	})
 </script>

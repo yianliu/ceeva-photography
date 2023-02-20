@@ -1,15 +1,16 @@
-<script setup>
-	const { slug } = useRoute().params
+<!-- <script setup>
+	// const { slug } = useRoute().params
 
-	const environment = useRuntimeConfig().environment
-	const story = await useStory(
-		slug && slug.length > 0 ? slug.join("/") : "home",
-		environment
-	)
-</script>
+	// const environment = useRuntimeConfig().environment
+	// const story = await useStory(
+	// 	slug && slug.length > 0 ? slug.join("/") : "home",
+	// 	environment
+	// )
+</script> -->
 
 <template>
-	<StoryblokComponent
+	<!-- <StoryblokComponent
 		v-if="story"
-		:blok="story.content" />
+		:blok="story.content" /> -->
+	Home
 </template>
