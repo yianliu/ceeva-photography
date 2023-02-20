@@ -6,13 +6,16 @@
 		"dev:https": "nuxt dev --https --ssl-cert localhost.pem --ssl-key localhost-key.pem",
 		"generate": "nuxt generate",
 		"preview": "nuxt preview",
-		"postinstall": "nuxt prepare"
+		"postinstall": "nuxt prepare",
+		"predev": "storyblok-generate-ts source=./components.$(grep 'STORYBLOK_SPACE_ID=' .env | cut -d '=' -f 2-).json target=./component-types-sb",
+		"predev:https": "storyblok-generate-ts source=./components.$(grep 'STORYBLOK_SPACE_ID=' .env | cut -d '=' -f 2-).json target=storyblok/component-types-sb"
 	},
 	"devDependencies": {
 		"@types/node": "^18.13.0",
 		"autoprefixer": "^10.4.13",
 		"nuxt": "^3.0.0",
 		"postcss": "^8.4.21",
+		"storyblok-generate-ts": "^1.13.1",
 		"tailwindcss": "^3.2.4",
 		"vue-gtag": "^2.0.1"
 	},

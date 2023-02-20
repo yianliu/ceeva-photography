@@ -6,7 +6,7 @@
 			:blok="blok"
 			class="mx-6 text-md text-medium hover:text-dark" />
 		<ul
-			v-if="blok.children.length"
+			v-if="blok.children?.length"
 			class="hidden min-w-full absolute z-10 bg-pale rounded-md">
 			<li>
 				<StoryLink
@@ -19,8 +19,9 @@
 	</div>
 </template>
 
-<script setup>
-	const { blok } = defineProps({ blok: Object })
+<script setup lang="ts">
+	import { NavlinkStoryblok } from "./component-types-sb"
+	defineProps<{ blok: NavlinkStoryblok }>()
 </script>
 
 <style scoped>
