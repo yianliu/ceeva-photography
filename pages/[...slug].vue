@@ -9,7 +9,10 @@
 </script>
 
 <template>
-	<StoryblokComponent
-		v-if="story"
-		:blok="story.content" />
+	<div>
+		{{ story }}
+		<StoryblokComponent
+			v-if="story"
+			:blok="story.content" />
+	</div>
 </template>
