@@ -1,8 +1,8 @@
 <script setup>
-	const story = await useStory("header", {
+	const env = useRuntimeConfig().public.environment
+	const story = await useStory("header", env, {
 		resolve_links: "url"
 	})
-	const env = useAppConfig().environment
 </script>
 
 <template>

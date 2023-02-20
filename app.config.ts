@@ -1,4 +1,3 @@
 export default defineAppConfig({
-	title: "Ceeva Liu Photography",
-	environment: process.env.ENVIRONMENT
+	title: "Ceeva Liu Photography"
 })
