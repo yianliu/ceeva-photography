@@ -7,9 +7,10 @@
 			<div
 				v-for="image in blok.images"
 				:key="image.id">
-				<img
-					:src="image.filename"
-					loading="lazy" />
+				<NuxtPicture
+					:src="`${image.filename}/m/`"
+					loading="lazy"
+					placeholder />
 				<div v-text="image.title"></div>
 			</div>
 		</div>
