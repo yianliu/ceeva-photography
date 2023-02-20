@@ -1,7 +1,7 @@
 <script setup>
-	// const story = await useStory("header", {
-	// 	resolve_links: "url"
-	// })
+	const story = await useStory("header", {
+		resolve_links: "url"
+	})
 	const env = useAppConfig().environment
 </script>
 
@@ -10,6 +10,7 @@
 		<!-- <StoryblokComponent
 			v-if="story"
 			:blok="story.content" /> -->
+		{{ story }}
 		{{ env }}
 	</div>
 </template>
