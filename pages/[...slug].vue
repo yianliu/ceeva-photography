@@ -11,8 +11,8 @@
 <template>
 	<div>
 		{{ story }}
-		<StoryblokComponent
+		<!-- <StoryblokComponent
 			v-if="story"
-			:blok="story.content" />
+			:blok="story.content" /> -->
 	</div>
 </template>
