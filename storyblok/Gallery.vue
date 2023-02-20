@@ -4,10 +4,10 @@
 			v-text="blok.title"
 			class="text-3xl text-center my-12"></h1>
 		<div class="columns-1 md:columns-2 lg:columns-3 gap-0">
-			<img
+			<nuxt-img
 				v-for="image in blok.images"
 				:key="image.id"
-				:src="image.filename"
+				:src="`${image.filename}/m/`"
 				loading="lazy" />
 		</div>
 	</div>

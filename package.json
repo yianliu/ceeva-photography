@@ -11,6 +11,7 @@
 		"predev:https": "storyblok-generate-ts source=./components.$(grep 'STORYBLOK_SPACE_ID=' .env | cut -d '=' -f 2-).json target=storyblok/component-types-sb"
 	},
 	"devDependencies": {
+		"@nuxt/image-edge": "^1.0.0-27919678.2f5b64b",
 		"@types/node": "^18.13.0",
 		"autoprefixer": "^10.4.13",
 		"nuxt": "^3.0.0",
