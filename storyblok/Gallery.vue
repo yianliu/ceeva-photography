@@ -13,10 +13,10 @@
 					:src="`${image.filename}/m/`"
 					loading="lazy"
 					placeholder
-					class="block ease-in-out"
+					class="block ease-in-out duration-500"
 					:class="image.title && 'group-hover:brightness-50'" />
 				<div
-					class="absolute inset-0 h-full w-full opacity-0 group-hover:opacity-100 ease-in-out"
+					class="absolute inset-0 h-full w-full opacity-0 group-hover:opacity-100 ease-out duration-75"
 					v-if="image.title">
 					<div
 						class="text-overlay text-xl absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-center"
