@@ -2,18 +2,21 @@
 	<div
 		v-editable="blok"
 		class="relative bg-white flex p-4 items-center place-content-between shadow">
-		<span
+		<NuxtLink
 			class="text-2xl mx-6 text-dark"
-			v-text="blok.title"></span>
+			to="/">
+			{{ blok.title }}
+		</NuxtLink>
 		<nav>
 			<StoryblokComponent
-				v-for="blok in blok.menu"
-				:key="blok._uid"
-				:blok="blok" />
+				v-for="item in blok.menu"
+				:key="item._uid"
+				:blok="item" />
 		</nav>
 	</div>
 </template>
 
-<script setup>
-	defineProps({ blok: Object })
+<script setup lang="ts">
+	import { NavbarStoryblok } from "./component-types-sb"
+	const { blok } = defineProps<{ blok: NavbarStoryblok }>()
 </script>
