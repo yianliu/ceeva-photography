@@ -7,15 +7,23 @@
 			<div
 				v-for="image in blok.images"
 				:key="image.id"
+				v-editable="image"
 				class="group relative">
 				<NuxtImg
 					:src="`${image.filename}/m/`"
 					loading="lazy"
 					placeholder
-					class="block" />
+					class="block ease-in-out"
+					:class="image.title && 'group-hover:brightness-50'" />
 				<div
-					v-text="'Hello'"
-					class="absolute inset-0 h-full w-full opacity-0 transition-colors group-hover:opacity-1"></div>
+					class="absolute inset-0 h-full w-full opacity-0 group-hover:opacity-100 ease-in-out"
+					v-if="image.title">
+					<div
+						class="text-overlay text-xl absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-center"
+						style="color: white">
+						{{ image.title }}
+					</div>
+				</div>
 			</div>
 		</div>
 	</div>
@@ -25,17 +33,3 @@
 	import { GalleryStoryblok } from "./component-types-sb"
 	defineProps<{ blok: GalleryStoryblok }>()
 </script>
-
-<style scoped>
-	.text {
-		color: white;
-		font-size: 20px;
-		position: absolute;
-		top: 50%;
-		left: 50%;
-		-webkit-transform: translate(-50%, -50%);
-		-ms-transform: translate(-50%, -50%);
-		transform: translate(-50%, -50%);
-		text-align: center;
-	}
-</style>

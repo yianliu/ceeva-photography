@@ -11,6 +11,7 @@
 			<li>
 				<StoryLink
 					v-for="child in blok.children"
+					v-editable="child"
 					:key="child._uid"
 					:blok="child"
 					class="block text-md p-2 text-medium hover:text-dark hover:bg-light rounded-md" />
