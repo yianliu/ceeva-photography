@@ -3,8 +3,7 @@
 		v-editable="blok"
 		class="bg-cover bg-fixed p-12"
 		:style="blok.background?.filename && { backgroundImage }">
-		<h1>{{ blok.heading }}</h1>
-		{{ blok }}
+		{{ blok.body }}
 	</div>
 </template>
 
