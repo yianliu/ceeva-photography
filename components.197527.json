@@ -4,7 +4,7 @@
       "name": "banner",
       "display_name": null,
       "created_at": "2023-02-21T17:42:49.200Z",
-      "updated_at": "2023-02-22T09:13:03.517Z",
+      "updated_at": "2023-02-22T17:42:01.874Z",
       "id": 3469569,
       "schema": {
         "background": {
@@ -27,20 +27,6 @@
             "images"
           ],
           "pos": 2
-        },
-        "heading": {
-          "type": "text",
-          "required": true,
-          "pos": 3
-        },
-        "heading_level": {
-          "type": "number",
-          "required": true,
-          "min_value": 1,
-          "max_value": 6,
-          "steps": 1,
-          "default_value": "2",
-          "pos": 4
         },
         "body": {
           "type": "richtext",

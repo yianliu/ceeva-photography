@@ -70,8 +70,6 @@ export interface BannerStoryblok {
   background?: AssetStoryblok;
   tablet_background?: AssetStoryblok;
   mobile_background?: AssetStoryblok;
-  heading: string;
-  heading_level: number;
   body?: any;
   link?: MultilinkStoryblok;
   alignment: "" | "left" | "centre" | "right";
