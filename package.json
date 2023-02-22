@@ -7,8 +7,8 @@
 		"generate": "nuxt generate",
 		"preview": "nuxt preview",
 		"postinstall": "nuxt prepare",
-		"predev": "storyblok-generate-ts source=./components.$(grep 'STORYBLOK_SPACE_ID=' .env | cut -d '=' -f 2-).json target=./component-types-sb",
-		"predev:https": "storyblok-generate-ts source=./components.$(grep 'STORYBLOK_SPACE_ID=' .env | cut -d '=' -f 2-).json target=storyblok/component-types-sb"
+		"predev": "storyblok pull-components --space=$(grep 'STORYBLOK_SPACE_ID=' .env | cut -d '=' -f 2-) && storyblok-generate-ts source=./components.$(grep 'STORYBLOK_SPACE_ID=' .env | cut -d '=' -f 2-).json target=storyblok/component-types-sb",
+		"predev:https": "storyblok pull-components --space=$(grep 'STORYBLOK_SPACE_ID=' .env | cut -d '=' -f 2-) && storyblok-generate-ts source=./components.$(grep 'STORYBLOK_SPACE_ID=' .env | cut -d '=' -f 2-).json target=storyblok/component-types-sb"
 	},
 	"devDependencies": {
 		"@nuxt/image-edge": "^1.0.0-27919678.2f5b64b",
