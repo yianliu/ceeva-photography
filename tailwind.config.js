@@ -16,7 +16,18 @@ module.exports = {
 			light: "#A9A9A9",
 			pale: "#F5F5F5"
 		},
-		extend: {}
+		extend: {
+			typography: (theme) => ({
+				DEFAULT: {
+					css: {
+						color: theme("colors.dark")
+					}
+				}
+			})
+		}
 	},
-	plugins: []
+	plugins: [
+		require("@tailwindcss/typography")
+		// ...
+	]
 }

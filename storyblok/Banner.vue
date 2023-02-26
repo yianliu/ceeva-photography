@@ -1,13 +1,14 @@
 <template>
 	<div
 		v-editable="blok"
-		class="bg-cover bg-fixed p-12 flex flex-col"
-		:class="alignClass"
+		class="flex flex-col bg-cover bg-fixed p-12"
+		:class="[blok.position, blok.alignment]"
 		:style="blok.background?.filename && { backgroundImage }">
-		<div
-			class="border-solid border-cyan-300 border-2 xl:max-w-3xl lg:w-1/2 w-full">
+		<div class="w-full lg:w-1/2 xl:max-w-3xl">
 			<div
+				v-editable="body"
 				class="body"
+				:class="blok.dark_text ? 'text-dark' : 'text-pale'"
 				v-html="body"></div>
 		</div>
 	</div>
@@ -23,20 +24,16 @@
 		blok.background?.filename
 	})`
 	const body = computed(() => renderRichText(blok.body))
-	const alignClass =
-		blok.alignment == "left"
-			? "items-start"
-			: blok.alignment == "centre"
-			? "items-center"
-			: "items-end"
 </script>
 
 <style>
-	.body h1 {
-		color: blue;
-	}
-
-	.body p {
-		color: red;
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
+		font-size: xx-large;
+		margin: 0.5em 0;
 	}
 </style>
