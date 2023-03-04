@@ -48,6 +48,7 @@
 	.blok {
 		background-image: v-bind(defaultImage);
 		background-attachment: fixed;
+		background-position: center;
 	}
 
 	@media screen and (min-width: 768px) {
