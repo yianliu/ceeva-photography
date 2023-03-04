@@ -1,9 +1,8 @@
 <template>
 	<div
 		v-editable="blok"
-		class="flex flex-col bg-cover bg-fixed p-12"
-		:class="[blok.position, blok.alignment]"
-		:style="blok.background?.filename && { backgroundImage }">
+		class="flex flex-col bg-cover bg-fixed p-12 blok"
+		:class="[blok.position, blok.alignment]">
 		<div class="w-full lg:w-1/2 xl:max-w-3xl">
 			<div
 				v-editable="body"
@@ -18,11 +17,21 @@
 	import { BannerStoryblok } from "./component-types-sb"
 
 	const { blok } = defineProps<{ blok: BannerStoryblok }>()
-	const backgroundImage = `url(${
-		blok.mobile_background?.filename ||
-		blok.tablet_background?.filename ||
-		blok.background?.filename
-	})`
+
+	const darkenBackground = blok.darken
+		? "linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),"
+		: ""
+	const defaultImage = blok.mobile_background?.filename
+		? darkenBackground + `url(${blok.mobile_background.filename})`
+		: "none"
+
+	const tabletImage = blok.tablet_background?.filename
+		? darkenBackground + `url(${blok.tablet_background.filename})`
+		: defaultImage
+
+	const desktopImage = blok.desktop_background?.filename
+		? darkenBackground + `url(${blok.desktop_background.filename})`
+		: defaultImage
 	const body = computed(() => renderRichText(blok.body))
 </script>
 
@@ -35,5 +44,21 @@
 	h6 {
 		font-size: xx-large;
 		margin: 0.5em 0;
+	}
+	.blok {
+		background-image: v-bind(defaultImage);
+		background-attachment: fixed;
+	}
+
+	@media screen and (min-width: 768px) {
+		.blok {
+			background-image: v-bind(tabletImage);
+		}
+	}
+
+	@media screen and (min-width: 1024px) {
+		.blok {
+			background-image: v-bind(desktopImage);
+		}
 	}
 </style>

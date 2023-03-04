@@ -1,5 +1,16 @@
 import {StoryblokStory} from 'storyblok-generate-ts'
 
+export interface AssetStoryblok {
+  alt?: string;
+  copyright?: string;
+  id: number;
+  filename: string;
+  name: string;
+  title?: string;
+  focus?: string;
+  [k: string]: any;
+}
+
 export type MultilinkStoryblok =
   | {
       cached_url?: string;
@@ -55,26 +66,16 @@ export type MultilinkStoryblok =
       [k: string]: any;
     };
 
-export interface AssetStoryblok {
-  alt?: string;
-  copyright?: string;
-  id: number;
-  filename: string;
-  name: string;
-  title?: string;
-  focus?: string;
-  [k: string]: any;
-}
-
 export interface BannerStoryblok {
+  desktop_background?: AssetStoryblok;
   body?: any;
   link?: MultilinkStoryblok;
   position: "" | "items-start" | "items-center" | "items-right";
   alignment: "" | "text-left" | "text-center" | "text-right" | "text-justify";
   dark_text?: boolean;
-  background?: AssetStoryblok;
   tablet_background?: AssetStoryblok;
   mobile_background?: AssetStoryblok;
+  darken?: boolean;
   _uid: string;
   component: "banner";
   [k: string]: any;

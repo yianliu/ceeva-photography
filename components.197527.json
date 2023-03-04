@@ -4,14 +4,22 @@
       "name": "banner",
       "display_name": null,
       "created_at": "2023-02-21T17:42:49.200Z",
-      "updated_at": "2023-02-26T11:52:26.652Z",
+      "updated_at": "2023-03-04T15:23:18.639Z",
       "id": 3469569,
       "schema": {
+        "desktop_background": {
+          "type": "asset",
+          "filetypes": [
+            "images"
+          ],
+          "pos": 0,
+          "key": "background"
+        },
         "body": {
           "type": "richtext",
           "restrict_type": "",
           "restrict_components": false,
-          "pos": 0,
+          "pos": 1,
           "style_options": [],
           "customize_toolbar": false,
           "toolbar": [],
@@ -20,7 +28,7 @@
         "link": {
           "type": "multilink",
           "show_anchor": false,
-          "pos": 1,
+          "pos": 2,
           "key": "link"
         },
         "position": {
@@ -46,13 +54,13 @@
           "exclude_empty_option": false,
           "required": true,
           "default_value": "left",
-          "pos": 2,
+          "pos": 3,
           "key": "alignment"
         },
         "alignment": {
           "type": "option",
           "use_uuid": true,
-          "pos": 3,
+          "pos": 4,
           "options": [
             {
               "_uid": "b9029157-521c-46ea-933e-8b1a0e7a3942",
@@ -83,15 +91,7 @@
           "required": false,
           "default_value": true,
           "key": "dark_text",
-          "pos": 4
-        },
-        "background": {
-          "type": "asset",
-          "filetypes": [
-            "images"
-          ],
-          "pos": 5,
-          "key": "background"
+          "pos": 5
         },
         "tablet_background": {
           "type": "asset",
@@ -107,18 +107,25 @@
             "images"
           ],
           "pos": 7,
-          "key": "mobile_background"
+          "key": "mobile_background",
+          "required": false
         },
         "tab-f5348765-89f6-4562-8f66-dd0efbf11940": {
           "display_name": "Background",
           "keys": [
             "background",
             "tablet_background",
-            "mobile_background"
+            "mobile_background",
+            "darken",
+            "desktop_background"
           ],
           "pos": 8,
           "type": "tab",
           "key": "tab-f5348765-89f6-4562-8f66-dd0efbf11940"
+        },
+        "darken": {
+          "type": "boolean",
+          "pos": 9
         }
       },
       "image": null,
