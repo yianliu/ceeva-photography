@@ -11,10 +11,11 @@ module.exports = {
 	],
 	theme: {
 		colors: {
-			dark: "#696969",
+			dark: "#333333",
 			medium: "#808080",
 			light: "#A9A9A9",
-			pale: "#F5F5F5"
+			pale: "#F5F5F5",
+			earth: "#C7A17A"
 		},
 		extend: {
 			typography: (theme) => ({

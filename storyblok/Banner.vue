@@ -1,14 +1,26 @@
 <template>
 	<div
 		v-editable="blok"
-		class="flex flex-col bg-cover bg-fixed p-12 blok"
-		:class="[blok.position, blok.alignment]">
+		class="flex flex-col bg-cover bg-fixed p-8 md:p-12 lg:p-16 blok"
+		:class="[`items-${blok.position}`, blok.alignment]">
 		<div class="w-full lg:w-1/2 xl:max-w-3xl">
 			<div
 				v-editable="body"
 				class="body"
 				:class="blok.dark_text ? 'text-dark' : 'text-pale'"
 				v-html="body"></div>
+			{{ body }}
+			<div
+				v-if="blok.links?.length"
+				class="w-full mt-3 p-2 flex flex-row gap-2"
+				:class="`justify-items-${blok.position}`"
+				v-editable="blok.links">
+				<StoryLink
+					v-for="link in blok.links"
+					class="bg-pale border-solid p-2"
+					:blok="link"
+					:key="link._uid" />
+			</div>
 		</div>
 	</div>
 </template>

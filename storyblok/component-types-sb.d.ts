@@ -11,6 +11,21 @@ export interface AssetStoryblok {
   [k: string]: any;
 }
 
+export interface BannerStoryblok {
+  desktop_background?: AssetStoryblok;
+  body?: any;
+  position: "" | "items-start" | "items-center" | "items-right";
+  alignment: "" | "text-left" | "text-center" | "text-right" | "text-justify";
+  dark_text?: boolean;
+  tablet_background?: AssetStoryblok;
+  mobile_background?: AssetStoryblok;
+  darken?: boolean;
+  links?: CtaStoryblok[];
+  _uid: string;
+  component: "banner";
+  [k: string]: any;
+}
+
 export type MultilinkStoryblok =
   | {
       cached_url?: string;
@@ -66,18 +81,11 @@ export type MultilinkStoryblok =
       [k: string]: any;
     };
 
-export interface BannerStoryblok {
-  desktop_background?: AssetStoryblok;
-  body?: any;
-  link?: MultilinkStoryblok;
-  position: "" | "items-start" | "items-center" | "items-right";
-  alignment: "" | "text-left" | "text-center" | "text-right" | "text-justify";
-  dark_text?: boolean;
-  tablet_background?: AssetStoryblok;
-  mobile_background?: AssetStoryblok;
-  darken?: boolean;
+export interface CtaStoryblok {
+  link: MultilinkStoryblok;
+  name?: string;
   _uid: string;
-  component: "banner";
+  component: "cta";
   [k: string]: any;
 }
 
