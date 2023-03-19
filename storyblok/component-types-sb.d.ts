@@ -14,7 +14,7 @@ export interface AssetStoryblok {
 export interface BannerStoryblok {
   desktop_background?: AssetStoryblok;
   body?: any;
-  position: "" | "items-start" | "items-center" | "items-right";
+  position: "" | "start" | "center" | "right";
   alignment: "" | "text-left" | "text-center" | "text-right" | "text-justify";
   dark_text?: boolean;
   tablet_background?: AssetStoryblok;

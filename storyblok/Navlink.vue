@@ -1,22 +1,24 @@
 <template>
 	<div
-		class="group relative inline-block"
+		class="mx-3 group relative inline-block"
 		v-editable="blok">
 		<StoryLink
 			:blok="blok"
-			class="mx-6 text-md text-medium hover:text-dark" />
-		<ul
-			v-if="blok.children?.length"
-			class="hidden min-w-full absolute z-10 bg-pale rounded-md group-hover:block">
-			<li>
-				<StoryLink
-					v-for="child in blok.children"
-					v-editable="child"
-					:key="child._uid"
-					:blok="child"
-					class="block text-md p-2 text-medium hover:text-dark hover:bg-light rounded-md" />
-			</li>
-		</ul>
+			class="mx-3 text-medium hover:text-dark nav-link" />
+		<div class="group-hover:block hidden min-w-full absolute z-10">
+			<ul
+				v-if="blok.children?.length"
+				class="mt-3 shadow bg-white">
+				<li>
+					<StoryLink
+						v-for="child in blok.children"
+						v-editable="child"
+						:key="child._uid"
+						:blok="child"
+						class="block p-2 text-sm text-medium hover:text-dark" />
+				</li>
+			</ul>
+		</div>
 	</div>
 </template>
 

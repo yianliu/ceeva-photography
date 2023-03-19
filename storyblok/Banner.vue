@@ -9,7 +9,6 @@
 				class="body"
 				:class="blok.dark_text ? 'text-dark' : 'text-pale'"
 				v-html="body"></div>
-			{{ body }}
 			<div
 				v-if="blok.links?.length"
 				class="w-full mt-3 p-2 flex flex-row gap-2"
@@ -48,15 +47,6 @@
 </script>
 
 <style>
-	h1,
-	h2,
-	h3,
-	h4,
-	h5,
-	h6 {
-		font-size: xx-large;
-		margin: 0.5em 0;
-	}
 	.blok {
 		background-image: v-bind(defaultImage);
 		background-attachment: fixed;
