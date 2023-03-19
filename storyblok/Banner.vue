@@ -16,7 +16,7 @@
 				v-editable="blok.links">
 				<StoryLink
 					v-for="link in blok.links"
-					class="bg-pale border-solid p-2"
+					class="inline-block border border-gray-400 hover:border-gray-500 active:border-gray-600 bg-transparent hover:bg-gray-100 active:bg-gray-200 text-gray-800 font-medium py-2 px-4 transition duration-300"
 					:blok="link"
 					:key="link._uid" />
 			</div>

@@ -30,8 +30,8 @@ export default defineNuxtConfig({
 	googleFonts: {
 		download: true,
 		families: {
-			Quicksand: [100, 300],
-			Lato: [100, 300]
+			Quicksand: [100, 300, 400],
+			Lato: [100, 300, 700]
 		}
 	}
 })
