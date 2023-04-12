@@ -1,9 +1,8 @@
 <script setup>
 	const { slug } = useRoute().params
-
 	const environment = useRuntimeConfig().public.environment
 	const story = await useStory(
-		slug && slug.length > 0 ? slug.join("/") : "home",
+		slug && slug.length > 0 ? slug.join("/").replace(/\/$/, "") : "home",
 		environment
 	)
 </script>

@@ -6,7 +6,10 @@ node_modules
 .output
 .env
 dist
-
+package-lock.json
+presets.*.json
+components.*.json
+storyblok/component-types-sb.d.ts
 .DS_Store
 **/.DS_Store
 

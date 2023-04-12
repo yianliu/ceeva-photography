@@ -1,4 +1,5 @@
 /** @type {import('tailwindcss').Config} */
+const colors = require("tailwindcss/colors")
 module.exports = {
 	content: [
 		"./components/**/*.{js,vue,ts}",
@@ -11,12 +12,28 @@ module.exports = {
 	],
 	theme: {
 		colors: {
-			dark: "#696969",
+			...colors,
+			dark: "#333333",
 			medium: "#808080",
 			light: "#A9A9A9",
-			pale: "#F5F5F5"
+			pale: "#F5F5F5",
+			earth: "#C7A17A"
 		},
-		extend: {}
+		extend: {
+			fontFamily: {
+				quicksand: ["Quicksand"]
+			},
+			typography: (theme) => ({
+				DEFAULT: {
+					css: {
+						color: theme("colors.dark")
+					}
+				}
+			})
+		}
 	},
-	plugins: []
+	plugins: [
+		require("@tailwindcss/typography")
+		// ...
+	]
 }

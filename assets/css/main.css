@@ -1,3 +1,43 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+	/* Navigation typography */
+	.nav-link {
+		@apply font-thin text-base md:text-lg leading-6 md:leading-7 text-gray-900 hover:text-gray-700 focus:outline-none focus:text-gray-700 transition duration-150 ease-in-out;
+	}
+
+	/* Heading typography */
+	h1,
+	h2,
+	h3 {
+		@apply font-heading font-bold;
+	}
+
+	h1 {
+		@apply text-2xl md:text-4xl leading-10 md:leading-10;
+	}
+
+	h2 {
+		@apply text-xl md:text-2xl leading-9 md:leading-8;
+	}
+
+	h3 {
+		@apply text-lg md:text-xl leading-6 md:leading-7;
+	}
+
+	/* Text body typography */
+	body {
+		@apply font-body font-light text-base md:text-lg leading-6 md:leading-7;
+	}
+
+	/* Font family aliases */
+	.font-body {
+		font-family: "Quicksand", sans-serif;
+	}
+
+	.font-heading {
+		font-family: "Lato", lato;
+	}
+}
