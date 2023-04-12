@@ -4,7 +4,7 @@
       "name": "banner",
       "display_name": null,
       "created_at": "2023-02-21T17:42:49.200Z",
-      "updated_at": "2023-03-10T19:06:51.891Z",
+      "updated_at": "2023-04-12T21:46:01.282Z",
       "id": 3469569,
       "schema": {
         "desktop_background": {
@@ -59,27 +59,28 @@
             {
               "_uid": "b9029157-521c-46ea-933e-8b1a0e7a3942",
               "name": "left",
-              "value": "text-left"
+              "value": "left"
             },
             {
               "_uid": "8bbe992f-a253-4ef6-b7d0-22706b1532b7",
-              "value": "text-center",
+              "value": "center",
               "name": "center"
             },
             {
               "_uid": "3a61fcdc-c263-41e7-8e31-b411588a7675",
-              "value": "text-right",
+              "value": "right",
               "name": "right"
             },
             {
               "_uid": "6f5f9b50-7cba-42ed-86b7-334c5c55b0a2",
-              "value": "text-justify",
+              "value": "justify",
               "name": "justify"
             }
           ],
-          "default_value": "text-justify",
+          "default_value": "",
           "required": true,
-          "key": "alignment"
+          "key": "alignment",
+          "exclude_empty_option": false
         },
         "dark_text": {
           "type": "boolean",

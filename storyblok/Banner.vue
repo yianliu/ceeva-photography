@@ -2,7 +2,10 @@
 	<div
 		v-editable="blok"
 		class="flex flex-col bg-cover bg-fixed p-8 md:p-12 lg:p-16 blok"
-		:class="[`items-${blok.position}`, blok.alignment]">
+		:class="[
+			`items-${blok.position}`,
+			blok.alignment && alignmentClasses[blok.alignment].text
+		]">
 		<div class="w-full lg:w-1/2 xl:max-w-3xl">
 			<div
 				v-editable="body"
@@ -12,7 +15,7 @@
 			<div
 				v-if="blok.links?.length"
 				class="w-full mt-3 p-2 flex flex-row gap-2"
-				:class="`justify-items-${blok.position}`"
+				:class="blok.alignment && alignmentClasses[blok.alignment].links"
 				v-editable="blok.links">
 				<StoryLink
 					v-for="link in blok.links"
@@ -44,6 +47,12 @@
 		? darkenBackground + `url(${blok.desktop_background.filename})`
 		: defaultImage
 	const body = computed(() => renderRichText(blok.body))
+	const alignmentClasses = {
+		left: { text: "text-left", links: "justify-start" },
+		center: { text: "text-center", links: "justify-center" },
+		right: { text: "text-right", links: "justify-end" },
+		justify: { text: "text-justify", links: "justify-evenly" }
+	}
 </script>
 
 <style>
