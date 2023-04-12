@@ -15,7 +15,7 @@ export interface BannerStoryblok {
   desktop_background?: AssetStoryblok;
   body?: any;
   position: "" | "start" | "center" | "right";
-  alignment: "" | "text-left" | "text-center" | "text-right" | "text-justify";
+  alignment: "" | "left" | "center" | "right" | "justify";
   dark_text?: boolean;
   tablet_background?: AssetStoryblok;
   mobile_background?: AssetStoryblok;
