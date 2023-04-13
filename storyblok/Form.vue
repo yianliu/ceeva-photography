@@ -2,6 +2,7 @@
 	<div>
 		<form
 			:name="blok.name"
+			@submit="submitHandler"
 			method="POST"
 			netlify
 			class="flex flex-col flex-wrap gap-6 p-5 md:p-9 lg:p-13">
@@ -16,6 +17,7 @@
 					:class="!field.fullWidth && 'sm:basis-1/2'"
 					:key="field._uid">
 					{{ field.name }}
+					{{ field.required ? "*" : null }}
 					<input
 						v-if="field.type != 'textarea'"
 						:type="field.type"
@@ -35,7 +37,7 @@
 			<input
 				type="submit"
 				value="submit"
-				class="cursor-pointer bg-red-400 w-fit py-3 px-4 mx-3" />
+				class="cursor-pointer cta w-fit mx-3" />
 		</form>
 	</div>
 </template>
@@ -43,4 +45,7 @@
 <script setup lang="ts">
 	import { FormStoryblok } from "./component-types-sb"
 	const { blok } = defineProps<{ blok: FormStoryblok }>()
+	const submitHandler = (event: Event) => {
+		alert(blok.message)
+	}
 </script>

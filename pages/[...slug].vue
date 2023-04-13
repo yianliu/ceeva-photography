@@ -5,7 +5,6 @@
 		slug && slug.length > 0 ? slug.join("/").replace(/\/$/, "") : "home",
 		environment
 	)
-	console.log(story)
 </script>
 
 <template>
