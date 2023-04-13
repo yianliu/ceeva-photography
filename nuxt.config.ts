@@ -9,9 +9,6 @@ export default defineNuxtConfig({
 			autoprefixer: {}
 		}
 	},
-	routeRules: {
-		"/**": { static: true }
-	},
 	modules: [
 		"@nuxt/image-edge",
 		"@nuxtjs/google-fonts",
