@@ -31,7 +31,7 @@ export default defineNuxtConfig({
 		download: true,
 		families: {
 			Quicksand: [100, 300, 400],
-			Lato: [100, 300, 700]
+			Lato: [100, 300, 400, 700]
 		}
 	}
 })

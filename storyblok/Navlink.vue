@@ -4,7 +4,7 @@
 		v-editable="blok">
 		<StoryLink
 			:blok="blok"
-			class="mx-3 text-medium hover:text-dark nav-link" />
+			class="mx-3 nav-link" />
 		<div class="group-hover:block hidden min-w-full absolute z-10">
 			<ul
 				v-if="blok.children?.length"
