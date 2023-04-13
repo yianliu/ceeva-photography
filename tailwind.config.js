@@ -16,6 +16,7 @@ module.exports = {
 			dark: "#333333",
 			medium: "#808080",
 			light: "#A9A9A9",
+			lighter: "#d4d4d4",
 			pale: "#F5F5F5",
 			earth: "#C7A17A"
 		},
