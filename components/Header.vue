@@ -9,6 +9,6 @@
 	<div>
 		<StoryblokComponent
 			v-if="story"
-			:blok="story.content" />
+			:blok="story.content" />{env}
 	</div>
 </template>
