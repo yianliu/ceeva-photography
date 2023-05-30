@@ -29,6 +29,6 @@
 </template>
 
 <script setup lang="ts">
-	import { NavlinkStoryblok } from "./component-types-sb"
-	defineProps<{ blok: NavlinkStoryblok }>()
+	import { NavLinkStoryblok } from "./component-types-sb"
+	defineProps<{ blok: NavLinkStoryblok }>()
 </script>

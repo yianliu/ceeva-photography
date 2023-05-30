@@ -17,6 +17,6 @@
 </template>
 
 <script setup lang="ts">
-	import { NavbarStoryblok } from "./component-types-sb"
-	const { blok } = defineProps<{ blok: NavbarStoryblok }>()
+	import { NavBarStoryblok } from "./component-types-sb"
+	const { blok } = defineProps<{ blok: NavBarStoryblok }>()
 </script>
