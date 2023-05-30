@@ -10,6 +10,5 @@
 		<StoryblokComponent
 			v-if="story"
 			:blok="story.content" />
-		Header
 	</div>
 </template>

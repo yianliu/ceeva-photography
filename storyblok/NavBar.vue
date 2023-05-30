@@ -13,7 +13,6 @@
 				:key="item._uid"
 				:blok="item" />
 		</nav>
-		Navbar
 	</div>
 </template>
 
