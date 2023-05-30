@@ -10,5 +10,6 @@
 		<StoryblokComponent
 			v-if="story"
 			:blok="story.content" />
+		{{ story }}
 	</div>
 </template>
