@@ -2,23 +2,17 @@
 	<div
 		class="mx-3 group relative inline-block"
 		v-editable="blok">
-		<StoryLink
-			:blok="blok"
-			v-if="blok.link?.url || blok.link?.cached_url"
+		<StoryblokComponent
+			:blok="blok.parent[0]"
 			class="mx-3 nav-link" />
-		<div
-			v-else
-			v-text="blok.name"
-			class="mx-3 nav-link cursor-default"></div>
 
 		<div class="group-hover:block hidden min-w-full absolute z-10">
 			<ul
 				v-if="blok.children?.length"
 				class="mt-3 shadow bg-white">
 				<li>
-					<StoryLink
+					<StoryblokComponent
 						v-for="child in blok.children"
-						v-editable="child"
 						:key="child._uid"
 						:blok="child"
 						class="block p-2 text-sm text-medium hover:text-dark" />
@@ -30,5 +24,5 @@
 
 <script setup lang="ts">
 	import { NavLinkStoryblok } from "./component-types-sb"
-	defineProps<{ blok: NavLinkStoryblok }>()
+	const { blok } = defineProps<{ blok: NavLinkStoryblok }>()
 </script>

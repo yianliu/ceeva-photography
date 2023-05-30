@@ -11,24 +11,10 @@
 				v-text="blok.title"
 				class="mx-3"></h2>
 			<div class="flex flex-row flex-wrap gap-y-3">
-				<label
+				<StoryblokComponent
 					v-for="field in blok.fields"
-					class="px-3 basis-full"
-					:class="!field.fullWidth && 'sm:basis-1/2'"
-					:key="field._uid">
-					{{ field.name }}
-					{{ field.required ? "*" : null }}
-					<input
-						v-if="field.type != 'textarea'"
-						:type="field.type"
-						:name="field.name"
-						class="appearance-none block w-full mt-2 bg-lighter border border-lighter py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-medium placeholder:text-dark"
-						:required="field.required"
-						:placeholder="field.placeholder" />
-					<textarea
-						v-else
-						class="appearance-none block w-full mt-2 bg-lighter border border-lighter py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-medium placeholder:text-dark" />
-				</label>
+					:key="field._uid"
+					:blok="field" />
 			</div>
 			<input
 				type="hidden"
