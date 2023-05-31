@@ -1,7 +1,7 @@
 <template>
 	<div
 		v-editable="blok"
-		class="flex flex-col bg-cover bg-fixed p-8 md:p-12 lg:p-16 blok min-h-screen justify-center"
+		class="flex flex-col bg-no-repeat bg-contain sm:bg-cover bg-fixed py-24 px-8 sm:p-8 md:p-12 lg:p-16 blok sm:min-h-screen justify-center"
 		:class="[
 			`items-${blok.position}`,
 			blok.alignment && alignmentClasses[blok.alignment].text
@@ -59,8 +59,6 @@
 <style>
 	.blok {
 		background-image: v-bind(defaultImage);
-		background-attachment: fixed;
-		background-position: center;
 	}
 
 	@media screen and (min-width: 768px) {
