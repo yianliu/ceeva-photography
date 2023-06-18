@@ -14,6 +14,7 @@
 			:placeholder="blok.placeholder" />
 		<textarea
 			v-else
+			:name="blok.name"
 			class="appearance-none block w-full mt-2 bg-lighter border border-lighter py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-medium placeholder:text-dark" />
 	</label>
 </template>
