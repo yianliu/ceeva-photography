@@ -24,6 +24,7 @@
 		"storyblok-generate-ts": "^1.13.1"
 	},
 	"dependencies": {
+		"@pinia/nuxt": "^0.4.11",
 		"@storyblok/nuxt": "^5.1.0"
 	}
 }
