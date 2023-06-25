@@ -9,11 +9,14 @@
 			v-if="blok.type != 'textarea'"
 			:type="blok.type"
 			:name="blok.name"
+			:id="blok._uid"
 			class="appearance-none block w-full mt-2 bg-lighter border border-lighter py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-medium placeholder:text-dark"
 			:required="blok.required"
 			:placeholder="blok.placeholder" />
 		<textarea
 			v-else
+			:name="blok.name"
+			:id="blok._uid"
 			class="appearance-none block w-full mt-2 bg-lighter border border-lighter py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-medium placeholder:text-dark" />
 	</label>
 </template>
