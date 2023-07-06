@@ -17,7 +17,7 @@
 		"@tailwindcss/typography": "^0.5.9",
 		"@types/node": "^18.13.0",
 		"autoprefixer": "^10.4.13",
-		"nuxt": "^3.0.0",
+		"nuxt": "^3.6.2",
 		"nuxt-gtag": "^0.2.2",
 		"postcss": "^8.4.21",
 		"prettier": "^2.8.4",
