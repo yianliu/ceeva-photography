@@ -5,7 +5,7 @@
 </template>
 <script setup lang="ts">
 	useHead({
-		title: "Ceeva Liu Photography | Manchester",
+		title: "Ceeva Photography | Manchester",
 		meta: [
 			{
 				name: "description",
