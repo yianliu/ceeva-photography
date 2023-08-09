@@ -3,8 +3,8 @@
 		<form
 			:name="blok.name"
 			@submit="submitHandler"
+			action="https://formspree.io/f/xzbleebq"
 			method="POST"
-			netlify
 			class="flex flex-col flex-wrap gap-6 p-5 md:p-9 lg:p-13">
 			<h2
 				v-if="blok.title"
