@@ -1,6 +1,6 @@
 <template>
 	<NuxtImg
-		:src="`${image.filename}/m/filters:quality(1)`"
+		:src="`${image.filename}/m/`"
 		loading="lazy"
 		placeholder
 		:height="height"
