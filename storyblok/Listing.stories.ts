@@ -15,7 +15,8 @@ export const Basic: Story = {
 			_uid: "test",
 			component: "Listing",
 			title: "Basic",
-			price: "100"
+			price: "100",
+			content: { type: "" }
 		}
 	}
 }
