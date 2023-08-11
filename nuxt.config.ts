@@ -31,5 +31,10 @@ export default defineNuxtConfig({
 			Quicksand: [100, 300, 400],
 			Lato: [100, 300, 400, 700]
 		}
+	},
+	image: {
+		storyblok: {
+			baseURL: "https://a.storyblok.com"
+		}
 	}
 })
