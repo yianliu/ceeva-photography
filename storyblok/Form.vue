@@ -1,6 +1,7 @@
 <template>
 	<div>
-		<form
+		<ElForm
+			label-position="top"
 			:name="blok.name"
 			@submit="submitHandler"
 			action="https://formspree.io/f/xzbleebq"
@@ -17,14 +18,10 @@
 					:blok="field" />
 			</div>
 			<input
-				type="hidden"
-				name="form-name"
-				:value="blok.name" />
-			<input
 				type="submit"
 				value="submit"
 				class="cursor-pointer cta w-fit mx-3" />
-		</form>
+		</ElForm>
 	</div>
 </template>
 
