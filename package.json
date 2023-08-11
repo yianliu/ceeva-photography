@@ -13,6 +13,7 @@
     "build-storybook": "storybook build"
   },
   "devDependencies": {
+    "@element-plus/nuxt": "^1.0.5",
     "@nuxt/image-edge": "^1.0.0-27919678.2f5b64b",
     "@nuxtjs/google-fonts": "^3.0.0",
     "@nuxtjs/tailwindcss": "^6.6.0",
@@ -37,6 +38,7 @@
   },
   "dependencies": {
     "@pinia/nuxt": "^0.4.11",
-    "@storyblok/nuxt": "^5.1.0"
+    "@storyblok/nuxt": "^5.1.0",
+    "element-plus": "^2.3.9"
   }
 }

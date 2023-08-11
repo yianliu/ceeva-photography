@@ -14,6 +14,7 @@ export default defineNuxtConfig({
 		"@nuxt/image-edge",
 		"@nuxtjs/google-fonts",
 		"@nuxtjs/tailwindcss",
+		"@element-plus/nuxt",
 		["@storyblok/nuxt", { accessToken: process.env.STORYBLOK_TOKEN }]
 	],
 	runtimeConfig: {
