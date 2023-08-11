@@ -4,7 +4,8 @@ import FormFieldVue from "./FormField.vue"
 import { FormFieldStoryblok } from "./component-types-sb"
 
 const meta: Meta<typeof FormFieldVue> = {
-	component: FormFieldVue
+	component: FormFieldVue,
+	tags: ["autodocs"]
 }
 
 export default meta
@@ -20,7 +21,7 @@ const blok: FormFieldStoryblok = {
 	placeholder: "John Doe"
 }
 
-export const Field: Story = {
+export const Name: Story = {
 	args: {
 		blok
 	}
