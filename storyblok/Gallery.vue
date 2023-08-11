@@ -9,12 +9,7 @@
 				:key="image.id"
 				v-editable="image"
 				class="group relative">
-				<NuxtImg
-					:src="`${image.filename}/m/`"
-					loading="lazy"
-					placeholder
-					class="block ease-in-out duration-500 w-full"
-					:class="image.title && 'group-hover:brightness-50'" />
+				<Image :image="image" />
 				<div
 					class="absolute inset-0 h-full w-full opacity-0 group-hover:opacity-100 ease-out duration-75"
 					v-if="image.title">

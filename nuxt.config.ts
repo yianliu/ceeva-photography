@@ -14,16 +14,12 @@ export default defineNuxtConfig({
 		"@nuxt/image-edge",
 		"@nuxtjs/google-fonts",
 		"@nuxtjs/tailwindcss",
-		"nuxt-gtag",
 		["@storyblok/nuxt", { accessToken: process.env.STORYBLOK_TOKEN }]
 	],
 	runtimeConfig: {
 		public: {
 			environment: process.env.ENVIRONMENT
 		}
-	},
-	gtag: {
-		id: "G-VJ7PD1FV89"
 	},
 	googleFonts: {
 		download: true,
