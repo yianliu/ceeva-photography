@@ -1,5 +1,8 @@
 <template>
-	<ListingCard :body="body" />
+	<ListingCard
+		:title="blok.title"
+		:body="body"
+		:price="parseInt(blok.price)" />
 </template>
 
 <script setup lang="ts">

@@ -11,6 +11,8 @@ type Story = StoryObj<typeof ListingCardVue>
 
 export const Main: Story = {
 	args: {
-		body: "Hello"
+		title: "Basic",
+		body: "Hello",
+		price: 5
 	}
 }
