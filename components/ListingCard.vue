@@ -3,11 +3,15 @@
 		<template #header>
 			<div
 				v-text="title"
-				class="flex flex-row justify-center items-center"></div>
+				class="text-center text-xl"></div>
 		</template>
 		<div v-html="body"></div>
-
-		{{ price }}
+		<ElDivider class="mx-6">
+			<ElIcon><ElIconStarFilled /></ElIcon
+		></ElDivider>
+		<div
+			class="text-center"
+			v-text="displayedPrice"></div>
 	</ElCard>
 </template>
 
@@ -17,5 +21,12 @@
 		body: string
 		price: number
 	}
-	const { body, title, price } = defineProps<Props>()
+	const { price } = defineProps<Props>()
+
+	const formatter = new Intl.NumberFormat("en-GB", {
+		style: "currency",
+		currency: "GBP",
+		maximumFractionDigits: 0
+	})
+	const displayedPrice = formatter.format(price)
 </script>
