@@ -1,18 +1,15 @@
 <template>
-	<ElCard>
-		<template #header>
-			<div
-				v-text="title"
-				class="text-center text-xl"></div>
-		</template>
-		<div v-html="body"></div>
-		<ElDivider class="mx-6">
-			<ElIcon><ElIconStarFilled /></ElIcon
-		></ElDivider>
+	<div class="text-dark border-2 rounded-md px-6">
 		<div
-			class="text-center"
+			v-text="title"
+			class="text-center text-xl border-b-2 py-8"></div>
+		<div
+			v-html="body"
+			class="border-b-2 leading-16 [&_li]:my-6 [&_ul]:list-disc pl-4"></div>
+		<div
+			class="text-center py-8"
 			v-text="displayedPrice"></div>
-	</ElCard>
+	</div>
 </template>
 
 <script setup lang="ts">

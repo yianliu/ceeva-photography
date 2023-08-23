@@ -15,7 +15,7 @@
 	h1,
 	h2,
 	h3 {
-		@apply font-heading font-thin;
+		@apply font-heading font-light;
 	}
 
 	h1 {

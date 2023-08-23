@@ -1,6 +1,6 @@
 <template>
 	<div class="flex flex-col items-center">
-		<ElForm
+		<form
 			label-position="top"
 			:name="blok.name"
 			@submit="submitHandler"
@@ -21,7 +21,7 @@
 				type="submit"
 				value="submit"
 				class="cursor-pointer cta w-fit mx-3" />
-		</ElForm>
+		</form>
 	</div>
 </template>
 
