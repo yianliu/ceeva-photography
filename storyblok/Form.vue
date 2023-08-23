@@ -1,12 +1,12 @@
 <template>
-	<div>
+	<div class="flex flex-col items-center">
 		<ElForm
 			label-position="top"
 			:name="blok.name"
 			@submit="submitHandler"
 			action="https://formspree.io/f/xzbleebq"
 			method="POST"
-			class="flex flex-col flex-wrap gap-6 p-5 md:p-9 lg:p-13">
+			class="flex flex-col flex-wrap gap-6 p-5 md:p-9 lg:p-13 max-w-2xl">
 			<h2
 				v-if="blok.title"
 				v-text="blok.title"

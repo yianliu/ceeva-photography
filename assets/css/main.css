@@ -5,7 +5,7 @@
 @layer base {
 	/* Navigation typography */
 	.nav-link {
-		@apply font-thin text-base md:text-lg leading-6 md:leading-7 text-medium hover:text-dark focus:outline-none focus:text-gray-700 transition duration-150 ease-in-out;
+		@apply text-base md:text-lg leading-6 md:leading-7 text-medium hover:text-dark focus:outline-none focus:text-gray-700 transition duration-150 ease-in-out;
 	}
 
 	.cta {
@@ -15,7 +15,7 @@
 	h1,
 	h2,
 	h3 {
-		@apply font-heading;
+		@apply font-heading font-thin;
 	}
 
 	h1 {
@@ -32,7 +32,7 @@
 
 	/* Text body typography */
 	body {
-		@apply font-body font-light text-base md:text-lg leading-6 md:leading-7;
+		@apply font-body text-base md:text-lg leading-6 md:leading-7;
 	}
 
 	/* Font family aliases */

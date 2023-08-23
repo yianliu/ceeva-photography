@@ -1,7 +1,7 @@
 <template>
 	<div
 		v-editable="blok"
-		class="relative bg-white flex p-4 items-center place-content-between shadow whitespace-nowrap">
+		class="relative bg-white flex p-4 items-baseline place-content-between shadow whitespace-nowrap">
 		<NuxtLink
 			class="text-lg md:text-2xl md:mx-6 text-dark"
 			to="/">
