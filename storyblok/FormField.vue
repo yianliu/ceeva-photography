@@ -1,22 +1,24 @@
 <template>
-	<ElFormItem
-		:label="blok.name + (blok.required ? '*' : '')"
+	<label
 		class="px-3 basis-full"
 		:class="!blok.fullWidth && 'sm:basis-1/2'"
 		:key="blok._uid">
-		<ElDatePicker
-			v-if="blok.type == 'date'"
-			type="date"
-			placeholder="Pick a day"
-			size="large" />
-		<ElInput
-			v-else
-			size="large"
+		{{ blok.name }}
+		{{ blok.required ? "*" : null }}
+		<input
+			v-if="blok.type != 'textarea'"
 			:type="blok.type"
 			:name="blok.name"
+			:id="blok._uid"
+			class="appearance-none block w-full mt-2 bg-lighter border border-lighter py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-medium placeholder:text-dark"
 			:required="blok.required"
 			:placeholder="blok.placeholder" />
-	</ElFormItem>
+		<textarea
+			v-else
+			:name="blok.name"
+			:id="blok._uid"
+			class="appearance-none block w-full mt-2 bg-lighter border border-lighter py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-medium placeholder:text-dark" />
+	</label>
 </template>
 
 <script setup lang="ts">
