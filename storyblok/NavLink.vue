@@ -15,7 +15,7 @@
 						v-for="child in blok.children"
 						:key="child._uid"
 						:blok="child"
-						class="block p-2 text-sm text-medium hover:text-dark" />
+						class="block p-2 text-sm text-gray-500 hover:text-gray-800" />
 				</li>
 			</ul>
 		</div>

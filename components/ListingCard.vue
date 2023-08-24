@@ -1,5 +1,5 @@
 <template>
-	<div class="text-dark border-2 rounded-md px-6">
+	<div class="text-gray-800 border-2 rounded-md px-6">
 		<div
 			v-text="title"
 			class="text-center text-xl border-b-2 py-8"></div>

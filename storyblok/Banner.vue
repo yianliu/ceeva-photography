@@ -10,7 +10,7 @@
 			<div
 				v-editable="body"
 				class="body"
-				:class="blok.dark_text ? 'text-dark' : 'text-pale'"
+				:class="blok.dark_text ? 'text-gray-800' : 'text-gray-200'"
 				v-html="body"></div>
 			<div
 				v-if="blok.links?.length"
@@ -20,7 +20,11 @@
 				<StoryblokComponent
 					v-for="link in blok.links"
 					class="cta"
-					:class="blok.dark_text ? 'text-dark' : 'text-pale hover:text-dark'"
+					:class="
+						blok.dark_text
+							? 'text-gray-800'
+							: 'text-gray-200 hover:text-gray-800'
+					"
 					:blok="link"
 					:key="link._uid" />
 			</div>
