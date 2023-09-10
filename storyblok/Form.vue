@@ -6,7 +6,7 @@
 			@submit="submitHandler"
 			action="https://formspree.io/f/xzbleebq"
 			method="POST"
-			class="flex flex-col flex-wrap gap-6 p-5 md:p-9 lg:p-13 max-w-2xl">
+			class="flex flex-col flex-wrap gap-6 p-5 md:p-9 lg:p-13 max-w-sm sm:max-w-2xl">
 			<h2
 				v-if="blok.title"
 				v-text="blok.title"
