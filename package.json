@@ -13,7 +13,6 @@
     "build-storybook": "storybook build"
   },
   "devDependencies": {
-    "@element-plus/nuxt": "^1.0.5",
     "@nuxt/image-edge": "^1.0.0-27919678.2f5b64b",
     "@nuxtjs/google-fonts": "^3.0.0",
     "@nuxtjs/tailwindcss": "^6.6.0",
@@ -28,18 +27,19 @@
     "@storybook/vue3-vite": "^7.3.2",
     "@tailwindcss/typography": "^0.5.9",
     "@types/node": "^18.13.0",
-    "autoprefixer": "^10.4.14",
+    "autoprefixer": "^10.4.15",
     "nuxt": "^3.6.2",
-    "postcss": "^8.4.27",
+    "postcss": "^8.4.28",
     "prettier": "^2.8.4",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "storyblok-generate-ts": "^1.13.1",
-    "storybook": "^7.3.2"
+    "storybook": "^7.3.2",
+    "tailwindcss": "^3.3.3"
   },
   "dependencies": {
     "@pinia/nuxt": "^0.4.11",
     "@storyblok/nuxt": "^5.1.0",
-    "element-plus": "^2.3.9"
+    "postcss-custom-properties": "^13.3.0"
   }
 }

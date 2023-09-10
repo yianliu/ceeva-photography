@@ -5,17 +5,17 @@
 @layer base {
 	/* Navigation typography */
 	.nav-link {
-		@apply font-thin text-base md:text-lg leading-6 md:leading-7 text-medium hover:text-dark focus:outline-none focus:text-gray-700 transition duration-150 ease-in-out;
+		@apply text-base md:text-lg leading-6 md:leading-7 text-gray-500 hover:text-gray-800 focus:outline-none focus:text-gray-700 transition duration-150 ease-in-out;
 	}
 
 	.cta {
-		@apply inline-block border border-lighter hover:border-medium active:border-dark bg-transparent hover:bg-white active:bg-lighter text-dark font-medium py-2 px-4 transition duration-300;
+		@apply inline-block border border-gray-400 hover:border-gray-500 active:border-gray-800 bg-transparent hover:bg-white active:bg-gray-300 text-gray-800 font-medium py-2 px-4 transition duration-300;
 	}
 	/* Heading typography */
 	h1,
 	h2,
 	h3 {
-		@apply font-heading;
+		@apply font-heading font-light;
 	}
 
 	h1 {
@@ -32,7 +32,7 @@
 
 	/* Text body typography */
 	body {
-		@apply font-body font-light text-base md:text-lg leading-6 md:leading-7;
+		@apply font-body text-base md:text-lg leading-6 md:leading-7;
 	}
 
 	/* Font family aliases */

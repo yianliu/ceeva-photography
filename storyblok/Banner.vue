@@ -1,7 +1,7 @@
 <template>
 	<div
 		v-editable="blok"
-		class="flex flex-col bg-no-repeat bg-cover md:bg-fixed py-24 px-8 sm:p-8 md:p-12 lg:p-16 blok sm:min-h-screen justify-center"
+		class="flex flex-col bg-no-repeat bg-cover bg-center md:bg-fixed py-24 px-8 sm:p-8 md:p-12 lg:p-16 blok min-h-screen justify-center"
 		:class="[
 			`items-${blok.position}`,
 			blok.alignment && alignmentClasses[blok.alignment].text
@@ -10,7 +10,7 @@
 			<div
 				v-editable="body"
 				class="body"
-				:class="blok.dark_text ? 'text-dark' : 'text-pale'"
+				:class="blok.dark_text ? 'text-gray-800' : 'text-gray-200'"
 				v-html="body"></div>
 			<div
 				v-if="blok.links?.length"
@@ -20,7 +20,11 @@
 				<StoryblokComponent
 					v-for="link in blok.links"
 					class="cta"
-					:class="blok.dark_text ? 'text-dark' : 'text-pale hover:text-dark'"
+					:class="
+						blok.dark_text
+							? 'text-gray-800'
+							: 'text-gray-200 hover:text-gray-800'
+					"
 					:blok="link"
 					:key="link._uid" />
 			</div>

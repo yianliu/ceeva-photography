@@ -1,9 +1,9 @@
 <template>
 	<div
 		v-editable="blok"
-		class="relative bg-white flex p-4 items-center place-content-between shadow whitespace-nowrap">
+		class="relative bg-white flex p-4 items-baseline place-content-between shadow whitespace-nowrap">
 		<NuxtLink
-			class="text-lg md:text-2xl md:mx-6 text-dark"
+			class="text-lg md:text-2xl md:mx-6 text-gray-800"
 			to="/">
 			{{ blok.title }}
 		</NuxtLink>
@@ -41,7 +41,7 @@
 				v-for="item in blok.menu"
 				:key="item._uid"
 				:blok="item"
-				class="block py-2 px-4 text-dark hover:bg-gray-100" />
+				class="block py-2 px-4 text-gray-800 hover:bg-gray-100" />
 		</nav>
 	</div>
 </template>

@@ -12,13 +12,12 @@ module.exports = {
 	],
 	theme: {
 		colors: {
-			...colors,
-			dark: "#333333",
-			medium: "#808080",
-			light: "#A9A9A9",
-			lighter: "#d4d4d4",
-			pale: "#F5F5F5",
-			earth: "#C7A17A"
+			gray: colors.stone,
+			inherit: colors.inherit,
+			current: colors.current,
+			transparent: colors.transparent,
+			black: colors.black,
+			white: colors.white
 		},
 		extend: {
 			fontFamily: {
@@ -27,7 +26,7 @@ module.exports = {
 			typography: (theme) => ({
 				DEFAULT: {
 					css: {
-						color: theme("colors.dark")
+						color: theme("colors.gray.800")
 					}
 				}
 			})
