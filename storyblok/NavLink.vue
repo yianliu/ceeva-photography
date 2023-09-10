@@ -9,7 +9,7 @@
 		<div class="group-hover:block hidden min-w-full absolute left-0 z-10">
 			<ul
 				v-if="blok.children?.length"
-				class="mt-3 shadow bg-white">
+				class="mt-3 shadow-md bg-white">
 				<li>
 					<StoryblokComponent
 						v-for="child in blok.children"

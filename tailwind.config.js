@@ -13,6 +13,7 @@ module.exports = {
 	theme: {
 		colors: {
 			gray: colors.stone,
+			emerald: colors.emerald,
 			inherit: colors.inherit,
 			current: colors.current,
 			transparent: colors.transparent,

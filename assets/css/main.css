@@ -32,7 +32,7 @@
 
 	/* Text body typography */
 	body {
-		@apply font-body text-base md:text-lg leading-6 md:leading-7;
+		@apply font-body text-sm md:text-base lg:text-lg leading-6 md:leading-7;
 	}
 
 	/* Font family aliases */
