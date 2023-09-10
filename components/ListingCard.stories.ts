@@ -12,7 +12,7 @@ type Story = StoryObj<typeof ListingCardVue>
 export const Main: Story = {
 	args: {
 		title: "Basic Package",
-		body: "<p> <span data-type='emoji' data-name='star2' emoji='🌟'>🌟</span> 500+ professionally retouched, high resolution images</p><p><span data-type='emoji' data-name='star2' emoji='🌟'>🌟</span> from prep to the last dance </p><p> <span data-type='emoji' data-name='star2' emoji='🌟'>🌟</span> password protected online gallery that you can download from, and share with your loved ones</p>",
+		body: "<ul><li><p>500+ professionally retouched, high resolution images</p></li><li><p>from prep to the last dance</p></li><li><p>password protected online gallery that you can download from, and share with your loved ones</p></li></ul>",
 		price: 1500
 	}
 }

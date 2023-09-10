@@ -25,3 +25,9 @@
 	import { FormFieldStoryblok } from "./component-types-sb"
 	const { blok } = defineProps<{ blok: FormFieldStoryblok }>()
 </script>
+
+<style scoped>
+	input::-webkit-datetime-edit {
+		@apply text-gray-500;
+	}
+</style>

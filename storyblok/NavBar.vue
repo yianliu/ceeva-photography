@@ -36,7 +36,7 @@
 		</button>
 		<nav
 			v-if="showMenu"
-			class="md:hidden absolute top-full left-0 w-full bg-white shadow flex flex-col">
+			class="md:hidden absolute top-full right-0 w-sm bg-white shadow flex flex-col">
 			<StoryblokComponent
 				v-for="item in blok.menu"
 				:key="item._uid"

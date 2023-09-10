@@ -6,7 +6,7 @@
 			:blok="blok.parent[0]"
 			class="mx-3 nav-link" />
 
-		<div class="group-hover:block hidden min-w-full absolute z-10">
+		<div class="group-hover:block hidden min-w-full absolute left-0 z-10">
 			<ul
 				v-if="blok.children?.length"
 				class="mt-3 shadow bg-white">
