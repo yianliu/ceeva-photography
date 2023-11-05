@@ -5,6 +5,6 @@ compatibility_date = "2023-09-18"
 # Bind a KV Namespace. Use KV as persistent storage for small key-value pairs.
 # Docs: https://developers.cloudflare.com/workers/runtime-apis/kv
 [[kv_namespaces]]
-binding = "SENDGRID"
-id = "f9a442a2461c42919b017e229c3cdf01"
+binding = "AWS"
+id = "67785bb19826427bb53e44a359bf14d7"
 

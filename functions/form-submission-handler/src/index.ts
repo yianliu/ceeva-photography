@@ -1,12 +1,29 @@
 import { PublishCommand, SNSClient } from "@aws-sdk/client-sns"
-export const snsClient = new SNSClient({})
 
 export interface Env {
-	SENDGRID: KVNamespace
+	AWS: KVNamespace
 }
+
+export const snsClient = new SNSClient({
+	region: "eu-west-2",
+	credentials: {
+		accessKeyId: "",
+		secretAccessKey: ""
+	}
+})
 
 export default {
 	async fetch(request: Request, env: Env): Promise<Response> {
+		const accessKeyId = (await env.AWS.get("ACCESS_KEY_ID")) || " "
+		const secretAccessKey = (await env.AWS.get("SECRET_ACCESS_KEY")) || ""
+		const snsClient = new SNSClient({
+			region: "eu-west-2",
+			credentials: {
+				accessKeyId,
+				secretAccessKey
+			}
+		})
+
 		const text = await request.text()
 
 		const decodedData = decodeURIComponent(text)
