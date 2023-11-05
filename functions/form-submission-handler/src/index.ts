@@ -1,12 +1,5 @@
-/**
- * Welcome to Cloudflare Workers! This is your first worker.
- *
- * - Run `npm run dev` in your terminal to start a development server
- * - Open a browser tab at http://localhost:8787/ to see your worker in action
- * - Run `npm run deploy` to publish your worker
- *
- * Learn more at https://developers.cloudflare.com/workers/
- */
+import { PublishCommand, SNSClient } from "@aws-sdk/client-sns"
+export const snsClient = new SNSClient({})
 
 export interface Env {
 	SENDGRID: KVNamespace
@@ -14,8 +7,6 @@ export interface Env {
 
 export default {
 	async fetch(request: Request, env: Env): Promise<Response> {
-		const token = await env.SENDGRID.get("TOKEN")
-		const email = await env.SENDGRID.get("EMAIL")
 		const text = await request.text()
 
 		const decodedData = decodeURIComponent(text)
@@ -33,26 +24,15 @@ export default {
 
 		const jsonData: string = JSON.stringify(formattedData)
 
-		console.log(jsonData)
+		console.log({ jsonData })
 
-		await fetch("https://api.sendgrid.com/v3/mail/send", {
-			method: "POST",
-			headers: {
-				Authorization: `Bearer ${token}`,
-				"Content-Type": "application/json"
-			},
-			body: JSON.stringify({
-				personalizations: [{ to: [{ email }] }],
-				from: { email },
-				subject: "You have received a new form submission",
-				content: [
-					{
-						type: "text/plain",
-						value: jsonData
-					}
-				]
+		const response = await snsClient.send(
+			new PublishCommand({
+				Message: jsonData,
+				TopicArn: "arn:aws:sns:eu-west-2:169135823480:contact-form-submission"
 			})
-		})
+		)
+		console.log({ response })
 		return Response.redirect("https://ceevaphotography.com/contact")
 	}
 }
