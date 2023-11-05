@@ -26,6 +26,16 @@ export default {
 
 		const text = await request.text()
 
+		if (text === "") {
+			await snsClient.send(
+				new PublishCommand({
+					Message: "Empty message submitted",
+					TopicArn: "arn:aws:sns:eu-west-2:169135823480:contact-form-submission"
+				})
+			)
+			return new Response("I'm a teapot", { status: 418 })
+		}
+
 		const decodedData = decodeURIComponent(text)
 
 		const pairs: string[] = decodedData.split("&")
