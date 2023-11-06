@@ -1,16 +1,8 @@
 import { PublishCommand, SNSClient } from "@aws-sdk/client-sns"
 
-export interface Env {
+interface Env {
 	AWS: KVNamespace
 }
-
-export const snsClient = new SNSClient({
-	region: "eu-west-2",
-	credentials: {
-		accessKeyId: "",
-		secretAccessKey: ""
-	}
-})
 
 export default {
 	async fetch(request: Request, env: Env): Promise<Response> {
@@ -26,14 +18,8 @@ export default {
 
 		const text = await request.text()
 
-		if (text === "") {
-			await snsClient.send(
-				new PublishCommand({
-					Message: "Empty message submitted",
-					TopicArn: "arn:aws:sns:eu-west-2:169135823480:contact-form-submission"
-				})
-			)
-			return new Response("I'm a teapot", { status: 418 })
+		if (text === "" || request.method != "POST") {
+			return new Response("Bad Request", { status: 400 })
 		}
 
 		const decodedData = decodeURIComponent(text)
