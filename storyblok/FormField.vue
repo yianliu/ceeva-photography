@@ -22,7 +22,7 @@
 </template>
 
 <script setup lang="ts">
-	import { FormFieldStoryblok } from "./component-types-sb"
+	import type { FormFieldStoryblok } from "./component-types-sb"
 	const { blok } = defineProps<{ blok: FormFieldStoryblok }>()
 </script>
 

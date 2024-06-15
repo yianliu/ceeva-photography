@@ -11,6 +11,6 @@
 </template>
 
 <script setup lang="ts">
-	import { LinkButtonStoryblok } from "./component-types-sb"
+	import type { LinkButtonStoryblok } from "./component-types-sb"
 	const { blok } = defineProps<{ blok: LinkButtonStoryblok }>()
 </script>

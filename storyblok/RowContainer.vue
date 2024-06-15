@@ -12,6 +12,6 @@
 </template>
 
 <script setup lang="ts">
-	import { RowContainerStoryblok } from "./component-types-sb"
+	import type { RowContainerStoryblok } from "./component-types-sb"
 	const { blok } = defineProps<{ blok: RowContainerStoryblok }>()
 </script>

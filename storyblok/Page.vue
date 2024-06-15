@@ -8,6 +8,6 @@
 </template>
 
 <script setup lang="ts">
-	import { PageStoryblok } from "./component-types-sb"
+	import type { PageStoryblok } from "./component-types-sb"
 	defineProps<{ blok: PageStoryblok }>()
 </script>

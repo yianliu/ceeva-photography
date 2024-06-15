@@ -25,6 +25,6 @@
 </template>
 
 <script setup lang="ts">
-	import { GalleryStoryblok } from "./component-types-sb"
+	import type { GalleryStoryblok } from "./component-types-sb"
 	defineProps<{ blok: GalleryStoryblok }>()
 </script>

@@ -26,7 +26,7 @@
 </template>
 
 <script setup lang="ts">
-	import { FormStoryblok } from "./component-types-sb"
+	import type { FormStoryblok } from "./component-types-sb"
 	const { blok } = defineProps<{ blok: FormStoryblok }>()
 	const submitHandler = (event: Event) => {
 		alert(blok.message)

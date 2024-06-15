@@ -47,7 +47,7 @@
 </template>
 
 <script setup lang="ts">
-	import { NavBarStoryblok } from "./component-types-sb"
+	import type { NavBarStoryblok } from "./component-types-sb"
 	const { blok } = defineProps<{ blok: NavBarStoryblok }>()
 	const showMenu = useState("counter", () => false)
 </script>

@@ -33,7 +33,7 @@
 </template>
 
 <script setup lang="ts">
-	import { BannerStoryblok } from "./component-types-sb"
+	import type { BannerStoryblok } from "./component-types-sb"
 
 	const { blok } = defineProps<{ blok: BannerStoryblok }>()
 

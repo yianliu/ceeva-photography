@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from "@storybook/vue3"
 
 import FormFieldVue from "./FormField.vue"
-import { FormFieldStoryblok } from "./component-types-sb"
+import type { FormFieldStoryblok } from "./component-types-sb"
 
 const meta: Meta<typeof FormFieldVue> = {
 	component: FormFieldVue,
