@@ -22,7 +22,7 @@ export default {
 			return new Response("Bad Request", { status: 400 })
 		}
 
-		const decodedData = decodeURIComponent(text)
+		const decodedData = decodeURIComponent(text.replace(/\+/g, ' '))
 
 		const pairs: string[] = decodedData.split("&")
 
@@ -35,13 +35,13 @@ export default {
 			formattedData[key] = value
 		})
 
-		const jsonData: string = JSON.stringify(formattedData)
+		const formattedString: string = `Name: ${formattedData.Name}\nE-mail: ${formattedData["E-mail"]}\nDate: ${formattedData.Date}\nMessage: ${formattedData.Message}`
 
-		console.log({ text, decodedData, formattedData, jsonData })
+		console.log({ jsonData: formattedString })
 
 		const response = await snsClient.send(
 			new PublishCommand({
-				Message: jsonData,
+				Message: formattedString,
 				TopicArn: "arn:aws:sns:eu-west-2:169135823480:contact-form-submission"
 			})
 		)
