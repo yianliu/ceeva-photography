@@ -22,7 +22,7 @@ export default {
 			return new Response("Bad Request", { status: 400 })
 		}
 
-		const decodedData = decodeURIComponent(text.replace(/\+/g, ' '))
+		const decodedData = decodeURIComponent(text.replace(/\+/g, " "))
 
 		const pairs: string[] = decodedData.split("&")
 
@@ -41,6 +41,7 @@ export default {
 
 		const response = await snsClient.send(
 			new PublishCommand({
+				Subject: "New Form Submission",
 				Message: formattedString,
 				TopicArn: "arn:aws:sns:eu-west-2:169135823480:contact-form-submission"
 			})
