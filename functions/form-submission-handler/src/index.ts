@@ -37,7 +37,7 @@ export default {
 
 		const jsonData: string = JSON.stringify(formattedData)
 
-		console.log({ jsonData })
+		console.log({ text, decodedData, formattedData, jsonData })
 
 		const response = await snsClient.send(
 			new PublishCommand({
