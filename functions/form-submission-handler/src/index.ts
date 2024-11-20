@@ -35,6 +35,10 @@ export default {
 			formattedData[key] = value
 		})
 
+		if (!formattedData.Name || !formattedData["E-mail"]) {
+			return new Response(null, { status: 418 })
+		}
+
 		const formattedString: string = `Name: ${formattedData.Name}\nE-mail: ${formattedData["E-mail"]}\nDate: ${formattedData.Date}\nMessage: ${formattedData.Message}`
 
 		console.log({ jsonData: formattedString })
