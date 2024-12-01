@@ -15,10 +15,14 @@ export default {
 				secretAccessKey
 			}
 		})
-
+		const referrer = request.headers.get("referer")
 		const text = await request.text()
 
-		if (text === "" || request.method != "POST") {
+		if (
+			text === "" ||
+			request.method != "POST" ||
+			!referrer?.includes("ceevaphotography.com")
+		) {
 			return new Response("Bad Request", { status: 400 })
 		}
 
