@@ -12,6 +12,7 @@ presets.*.json
 components.*.json
 storyblok/component-types-sb.d.ts
 .DS_Store
+.storyblok/logs/*
 **/.DS_Store
 
 localhost*
