@@ -4,7 +4,7 @@
 			label-position="top"
 			:name="blok.name"
 			@submit="submitHandler"
-			action="https://form.ceevaphotography.com"
+			action="https://formspree.io/f/xzbleebq"
 			method="POST"
 			class="flex flex-col flex-wrap gap-6 p-5 md:p-9 lg:p-13 max-w-sm sm:max-w-2xl">
 			<h2
